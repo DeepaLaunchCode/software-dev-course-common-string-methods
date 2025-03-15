@@ -65,12 +65,53 @@ Complete the following tasks and assign the results to the specified variables. 
 
 */
 
-//Starter Code
+//Problem 1 :
+let sentence = "Learning JavaScript is fun!";
+let hasJavaScript = sentence.includes("JavaScript"); // Check if "JavaScript" is in the sentence
+let funPosition = sentence.indexOf("fun"); // Find the position of "fun"
+
+// Activity 2: Transforming Strings
+let rawString = " CODE BOOTCAMP ";
+let trimmedLowerCase = rawString.trim().toLowerCase(); 
+let transformedString = trimmedLowerCase.replace("bootcamp", "JavaScript"); 
+
+// Activity 3: Breaking Apart a Sentence
+let sentenceToSplit = "Coding is fun and educational";
+let wordsArray = sentenceToSplit.split(" "); 
+
+// Activity 4: Retrieving Substrings
+let bootcamp = "Bootcamp";
+let firstCharacter = bootcamp.charAt(0);
+let extractedCamp = bootcamp.slice(4); 
+
+// Advanced Challenge
+let orderDetails = `Customer: John Doe
+Order: Apple, Banana, Grape
+Total: $20.50`;
+
+let customerName = orderDetails.split("\n")[0].split(": ")[1]; 
+let orderItems = orderDetails.split("\n")[1].split(": ")[1].split(", "); 
+let totalUpperCase = orderDetails.split("\n")[2].toUpperCase();
+
+console.log("First program output");
+// Log results
+console.log({
+  hasJavaScript,
+  funPosition,
+  transformedString,
+  wordsArray,
+  firstCharacter,
+  extractedCamp,
+  customerName,
+  orderItems,
+  totalUpperCase,
+}); 
+//Starter Code Problem 2
 let inputString = "  Welcome to the Coding Bootcamp! Learn JavaScript today.  ";
 
 // 1. Searching
 
-let hasJavaScript = inputString.includes("JavaScript");
+let hasJavaScript1 = inputString.includes("JavaScript");
 let codingPosition = inputString.indexOf("Coding");
 let startsWithWelcome = inputString.trim().startsWith("Welcome");
 let endsWithToday = inputString.trim().endsWith("today.");
@@ -85,16 +126,18 @@ let replacedString = inputString.replace("JavaScript", "coding");
 
 // 3. Breaking Apart
 
-let wordsArray = trimmedString.split(" ");
+let wordsArray1 = trimmedString.split(" ");
 
 
 // 4. Retrieving
-let firstCharacter = trimmedString.charAt(0);
+let firstCharacter1 = trimmedString.charAt(0);
 let extractedBootcamp = trimmedString.slice(trimmedString.indexOf("Bootcamp"), trimmedString.indexOf("Bootcamp") + 8);
 
 // Log all results
-console.log({
-  hasJavaScript,
+console.log("Second program output");
+
+  console.log({
+  hasJavaScript1,
   codingPosition,
   startsWithWelcome,
   endsWithToday,
@@ -102,7 +145,7 @@ console.log({
   uppercaseString,
   trimmedString,
   replacedString,
-  wordsArray,
-  firstCharacter,
+  wordsArray1,
+  firstCharacter1,
   extractedBootcamp,
 });
